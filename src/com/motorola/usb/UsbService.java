@@ -394,6 +394,7 @@ public class UsbService extends Service
 
         mUsbListener = new UsbListener(mHandler);
         new Thread(mUsbListener, UsbListener.class.getName()).start();
+	if (!getResources().getBoolean(R.bool.disable_uevent))
         mUEventObserver.startObserving("DEVPATH=/devices/virtual/misc/usbnet_enable");
     }
 
