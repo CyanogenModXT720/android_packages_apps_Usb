@@ -53,14 +53,14 @@ public final class UsbListener implements Runnable
     public static final String EVENT_START_MSC = "usbd_start_msc_mount";
     public static final String EVENT_START_ACM = "usbd_start_acm";
     public static final String EVENT_START_MODEM = "usbd_start_modem";
-    public static final String EVENT_START_RNDIS = "usbd_start_rndis";
+    public static final String EVENT_START_RNDIS = "usbd_start_ngp";
     private static final String EVENT_START_PREFIX = "usbd_start_";
     public static final String EVENT_REQ_NGP = "usbd_req_switch_ngp";
     public static final String EVENT_REQ_MTP = "usbd_req_switch_mtp";
     public static final String EVENT_REQ_MSC = "usbd_req_switch_msc";
     public static final String EVENT_REQ_ACM = "usbd_req_switch_acm";
     public static final String EVENT_REQ_MODEM = "usbd_req_switch_modem";
-    public static final String EVENT_REQ_RNDIS = "usbd_req_switch_rndis";
+    public static final String EVENT_REQ_RNDIS = "usbd_req_switch_ngp";
     public static final String EVENT_REQ_NONE = "usbd_req_switch_none";
     private static final String EVENT_REQ_PREFIX = "usbd_req_switch_";
     private static final String SWITCH_OK_POSTFIX = ":ok";
@@ -69,12 +69,12 @@ public final class UsbListener implements Runnable
     public static final String MODE_NGP_ADB = "usb_mode_ngp_adb";
     public static final String MODE_MTP_ADB = "usb_mode_mtp_adb";
     public static final String MODE_MSC_ADB = "usb_mode_msc_adb";
-    public static final String MODE_RNDIS_ADB = "usb_mode_rndis_adb";
+    public static final String MODE_RNDIS_ADB = "usb_mode_ngp_adb";
     public static final String MODE_CHARGE_ADB = "usb_mode_charge_adb";
     public static final String MODE_NGP = "usb_mode_ngp";
     public static final String MODE_MTP = "usb_mode_mtp";
     public static final String MODE_MSC = "usb_mode_msc";
-    public static final String MODE_RNDIS = "usb_mode_rndis";
+    public static final String MODE_RNDIS = "usb_mode_ngp";
     public static final String MODE_MODEM = "usb_mode_modem";
     public static final String MODE_CHARGE = "usb_mode_charge_only";
 
