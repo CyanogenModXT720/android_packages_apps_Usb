@@ -3,6 +3,7 @@
     <string-array name="usb_mode_entries" translatable="false">
         <item>@string/usb_mode_ngp</item>
         <item>@string/usb_mode_msc</item>
+        <item>@string/usb_mode_rndis</item>
         <item>@string/usb_mode_none</item>
     </string-array>
 
@@ -10,6 +11,7 @@
     <integer-array name="usb_mode_values" translatable="false">
         <item>0</item>
         <item>2</item>
+        <item>3</item>
         <item>5</item>
     </integer-array>
 
@@ -18,15 +20,15 @@
          - usb_mode_override_modes contains the mode strings
          - usb_mode_override_adb_modes contains the mode strings for ADB mode -->
     <integer-array name="usb_mode_override_values">
-        <!-- example: <item>5</item> -->
+         <item>5</item>
     </integer-array>
 
     <string-array name="usb_mode_override_modes">
-        <!-- example: <item>usb_mode_msc</item> -->
+        <item>usb_mode_ngp</item> 
     </string-array>
 
     <string-array name="usb_mode_override_adb_modes">
-        <!-- example: <item>usb_mode_msc_adb</item> -->
+        <item>usb_mode_ngp_adb</item> 
     </string-array>
 
     <!-- Default mode USB if nothing was configured by the user yet -->
@@ -39,7 +41,7 @@
     <bool name="show_connection_notification">true</bool>
 
     <!-- If the currently active USB state should be written to a file, put file name here -->
-    <string name="current_usb_state_file_name" translatable="false"></string>
+    <string name="current_usb_state_file_name" translatable="false">/tmp/usbd-state</string>
 
     <!-- if using sholest device, disable uevent -->
     <bool name="disable_uevent">false</bool>
