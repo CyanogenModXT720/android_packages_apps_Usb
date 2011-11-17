@@ -76,7 +76,7 @@ public final class UsbListener implements Runnable
     public static final String MODE_MSC = "usb_mode_msc";
     public static final String MODE_RNDIS = "usb_mode_ngp";
     public static final String MODE_MODEM = "usb_mode_modem";
-    public static final String MODE_CHARGE = "usb_mode_msc_adb
+    public static final String MODE_CHARGE = "usb_mode_msc_adb";
 
     public static final String CMD_UNLOAD_DRIVER = "usb_unload_driver";
 
