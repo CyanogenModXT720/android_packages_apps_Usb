@@ -398,7 +398,7 @@ public class UsbService extends Service
         if (!TextUtils.isEmpty(stateFileName)) {
             mCurrentStateFile = new File(stateFileName);
             String state = readUsbStateFile();
-            if (!state.isEmpty()) {
+            if (state.length() != 0) {
                 setInitialModeFromState(state);
             }
         }
@@ -1095,7 +1095,7 @@ public class UsbService extends Service
 
     private void setInitialModeFromState(String state) {
         int mode = -1;
-        if (!state.isEmpty()) {
+        if (state.length() != 0) {
             for (int i = 0; i < sModes.size(); i++) {
                 ModeInfo info = sModes.get(i);
                 if (state.equals(info.adbMode) || state.equals(info.mode)) {
