@@ -424,13 +424,8 @@ public class UsbService extends Service
                     if (mIsSwitchFrom != USB_SWITCH_FROM_IDLE) {
                         if (mIsSwitchFrom != USB_SWITCH_FROM_ADB) {
                             showConnectedToast(currentMode);
-<<<<<<< HEAD
-                            setUsbConnectionNotificationVisibility(true, false);
-                            enableInternalDataConnectivity(currentMode != USB_MODE_MODEM);
-=======
                             setUsbConnectionNotificationVisibility(true);
                             enableInternalDataConnectivity(currentMode != USB_MODE_ACM);
->>>>>>> 1129b74... Adapt to usbd built from source
                         }
                         emitReconfigurationIntent(true);
                         updateUsbStateFile(true, currentMode);
@@ -817,8 +812,6 @@ public class UsbService extends Service
     private void emitReconfigurationIntent(boolean connected) {
         Intent reconfigureIntent = new Intent(ACTION_USB_RECONFIGURED);
         reconfigureIntent.putExtra(EXTRA_RECONFIGURE_CONNECTED, connected);
-<<<<<<< HEAD
-=======
         reconfigureIntent.putExtra(EXTRA_RECONFIGURE_CONFIGURED, configured);
 
         switch (getCurrentUsbMode()) {
@@ -842,7 +835,6 @@ public class UsbService extends Service
                     TextUtils.join(",", functions));
         }
 
->>>>>>> 1129b74... Adapt to usbd built from source
         sendBroadcast(reconfigureIntent);
     }
 
@@ -958,13 +950,8 @@ public class UsbService extends Service
         mUsbCableAttached = true;
 
         int currentMode = getCurrentUsbMode();
-<<<<<<< HEAD
-        setUsbConnectionNotificationVisibility(true, true);
-        enableInternalDataConnectivity(currentMode != USB_MODE_MODEM);
-=======
         setUsbConnectionNotificationVisibility(true);
         enableInternalDataConnectivity(currentMode != USB_MODE_ACM);
->>>>>>> 1129b74... Adapt to usbd built from source
         sendBroadcast(new Intent(ACTION_CABLE_ATTACHED));
         emitReconfigurationIntent(true);
         updateUsbStateFile(true, currentMode);
@@ -1050,8 +1037,6 @@ public class UsbService extends Service
             UsbSettings.writeMode(this, -1, false);
             mNewUsbMode = getCurrentUsbMode();
             mIsSwitchFrom = USB_SWITCH_FROM_UI;
-<<<<<<< HEAD
-=======
         } else {
             if (functions.indexOf(UsbManager.USB_FUNCTION_MTP) >= 0) {
                 mNewUsbMode = USB_MODE_ACM_ETH;
@@ -1068,7 +1053,6 @@ public class UsbService extends Service
                 UsbSettings.writeMode(this, mNewUsbMode, true);
             }
             mIsSwitchFrom = USB_SWITCH_FROM_USBD;
->>>>>>> 1129b74... Adapt to usbd built from source
         }
 
         handleUsbEvent(EVENT_SWITCH);
