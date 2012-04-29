@@ -57,6 +57,7 @@ public final class UsbListener implements Runnable
     public static final String EVENT_START_MTP = "usbd_start_mtp";
     public static final String EVENT_START_MSC = "usbd_start_msc";
     public static final String EVENT_START_ACM = "usbd_start_acm";
+	public static final String EVENT_START_RNDIS = "usbd_start_rndis";
     private static final String EVENT_START_PREFIX = "usbd_start_";
     
     public static final String EVENT_REQ_ETH = "usbd_req_switch_eth";
